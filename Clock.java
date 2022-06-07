@@ -1,12 +1,12 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 class Clock {
     public static void main(String[] args) {
         DateTimeFormatter timeFormat = DateTimeFormatter.ofPattern("hh:mm");
-        Date date = new Date();
+        LocalDateTime date = LocalDateTime.now();
         System.out.printf("Before formatting: " + date);
-        String formattedTime = timeFormat.format(new Date());
+        String formattedTime = timeFormat.format(date);
         System.out.printf("After formatting: " + formattedTime);
     }
   }
